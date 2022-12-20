@@ -42,6 +42,3 @@ class WordFinder:
         """
 
         return choice(self.words)
-
-
-
