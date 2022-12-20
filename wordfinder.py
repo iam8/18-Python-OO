@@ -49,3 +49,28 @@ class WordFinder:
         """
 
         return choice(self.words)
+
+
+class SpecialWordFinder(WordFinder):
+    """
+    Extends WordFinder class.
+
+    Blank lines or commented-out lines in the given file of words will be ignored.
+    """
+
+    def read_file(self):
+        """
+        Read the dictionary file and create a list that contains all the words from that file.
+
+        Blank lines or commented-out lines in the dictionary file (lines that begin with a #) will
+        not be included in the SpecialWordFinder.
+        """
+
+        words = []
+        with open(self.dict_path, "rt") as file:
+            line = file.readline().strip()
+
+            if line and not line.startswith("#"):
+                words.append(line)
+
+            return words
