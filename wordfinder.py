@@ -56,6 +56,13 @@ class SpecialWordFinder(WordFinder):
     Extends WordFinder class.
 
     Blank lines or commented-out lines in the given file of words will be ignored.
+
+    >>> spec_finder = SpecialWordFinder("./words_special.txt")
+    7 words read.
+
+    >>> spec_finder.print_num_words()
+    7 words read.
+
     """
 
     def read_file(self):
@@ -68,9 +75,10 @@ class SpecialWordFinder(WordFinder):
 
         words = []
         with open(self.dict_path, "rt") as file:
-            line = file.readline().strip()
 
-            if line and not line.startswith("#"):
-                words.append(line)
+            for line in file:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    words.append(line)
 
-            return words
+        return words
