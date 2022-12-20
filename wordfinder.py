@@ -6,12 +6,19 @@
 
 from random import choice
 
+
 class WordFinder:
     """
     Class to find random words from a given dictionary.
 
     dict_path (str): path to a 'dictionary' file on disk. The file must contain words, with one
     word per line.
+
+    >>> finder = WordFinder("./words.txt")
+    235886 words read.
+
+    >>> finder.print_num_words()
+    235886 words read.
 
     """
 
@@ -35,7 +42,6 @@ class WordFinder:
         """
 
         print(f"{len(self.words)} words read.")
-
     def random(self):
         """
         Return a random word from the dictionary file.
