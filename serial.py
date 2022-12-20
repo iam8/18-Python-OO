@@ -1,4 +1,9 @@
+# Ioana A Mititean
+# 12/19/22
+# 18.8: Python OOP Exercise
+
 """Python serial number generator."""
+
 
 class SerialGenerator:
     """Machine to create unique incrementing serial numbers.
