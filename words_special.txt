@@ -1,0 +1,15 @@
+# Veggies
+
+kale
+parsnips
+
+# Fruits
+
+apple
+mango
+
+# Cereal flavors
+
+cinnamon
+peanut
+honey
