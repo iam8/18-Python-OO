@@ -33,7 +33,7 @@ class WordFinder:
         Read the dictionary file and create a list that contains all the words from that file.
         """
 
-        with open(self.dict_path) as file:
+        with open(self.dict_path, "rt") as file:
             return [word.strip() for word in file]
 
     def print_num_words(self):
@@ -42,6 +42,7 @@ class WordFinder:
         """
 
         print(f"{len(self.words)} words read.")
+
     def random(self):
         """
         Return a random word from the dictionary file.
