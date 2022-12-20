@@ -25,8 +25,16 @@ class SerialGenerator:
         self.current = start
 
     def generate(self):
+        """
+        Increment and return the next number in the sequence, starting with the value 'start'.
+        """
+
         self.current += 1
         return self.current - 1
 
     def reset(self):
+        """
+        Reset the number generator back to the original starting number.
+        """
+
         self.current = self.start
