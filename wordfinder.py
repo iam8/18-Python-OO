@@ -20,6 +20,21 @@ class WordFinder:
     >>> finder.print_num_words()
     235886 words read.
 
+    >>> word1 = finder.random()
+    >>> word2 = finder.random()
+    >>> word3 = finder.random()
+
+    >>> word1 in finder.words
+    True
+
+    >>> word2 in finder.words
+    True
+
+    >>> word3 in finder.words
+    True
+
+    >>> len(set([word1, word2, word3])) == 3
+    True
     """
 
     def __init__(self, dict_path):
@@ -62,6 +77,11 @@ class SpecialWordFinder(WordFinder):
 
     >>> spec_finder.print_num_words()
     7 words read.
+
+    >>> spec_word1 = spec_finder.random()
+
+    >>> spec_word1 in spec_finder.words
+    True
 
     """
 
