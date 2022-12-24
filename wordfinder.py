@@ -20,18 +20,9 @@ class WordFinder:
     >>> finder.print_num_words()
     235886 words read.
 
-    >>> word1 = finder.random()
-    >>> word2 = finder.random()
-    >>> word3 = finder.random()
-
-    >>> word1 in finder.words
-    True
-
-    >>> word2 in finder.words
-    True
-
-    >>> word3 in finder.words
-    True
+    >>> finder.random() in finder.words
+    >>> finder.random() in finder.words
+    >>> finder.random() in finder.words
 
     >>> # Has a very small chance of failing
     >>> len(set([word1, word2, word3])) == 3
@@ -42,12 +33,20 @@ class WordFinder:
     """
 
     def __init__(self, dict_path):
+        """
+        Create a new WordFinder with the given dictionary file path.
+        """
+
         self.dict_path = dict_path
         self.words = self.read_file()
 
         self.print_num_words()
 
     def __repr__(self):
+        """
+        Return string representation of WordFinder instance.
+        """
+
         return f"WordFinder(dict_path='{self.dict_path}')"
 
     def read_file(self):
