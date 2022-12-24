@@ -23,11 +23,17 @@ class SerialGenerator:
 
     >>> serial.generate()
     100
+
+    >>> serial
+    SerialGenerator(start=100)
     """
 
     def __init__(self, start) -> None:
         self.start = start
         self.current = start
+
+    def __repr__(self):
+        return f"SerialGenerator(start={self.start})"
 
     def generate(self):
         """
