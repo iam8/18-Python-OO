@@ -28,11 +28,19 @@ class SerialGenerator:
     SerialGenerator(start=100)
     """
 
-    def __init__(self, start) -> None:
+    def __init__(self, start=0) -> None:
+        """
+        Create a new serial generator starting at the integer 'start' (default 0).
+        """
+
         self.start = start
         self.current = start
 
     def __repr__(self):
+        """
+        Return string representation of the SerialGenerator.
+        """
+
         return f"SerialGenerator(start={self.start})"
 
     def generate(self):
