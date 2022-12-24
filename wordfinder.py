@@ -33,6 +33,7 @@ class WordFinder:
     >>> word3 in finder.words
     True
 
+    >>> # Has a very small chance of failing
     >>> len(set([word1, word2, word3])) == 3
     True
     """
