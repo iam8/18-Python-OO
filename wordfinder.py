@@ -34,7 +34,8 @@ class WordFinder:
 
     def __init__(self, dict_path):
         """
-        Create a new WordFinder with the given dictionary file path.
+        Create a new WordFinder and report number of words read from the file at the given
+        dictionary file path.
         """
 
         self.dict_path = dict_path
