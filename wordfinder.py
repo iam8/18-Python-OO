@@ -36,6 +36,9 @@ class WordFinder:
     >>> # Has a very small chance of failing
     >>> len(set([word1, word2, word3])) == 3
     True
+
+    >>> finder
+    WordFinder(dict_path='./words.txt')
     """
 
     def __init__(self, dict_path):
@@ -43,6 +46,9 @@ class WordFinder:
         self.words = self.read_file()
 
         self.print_num_words()
+
+    def __repr__(self):
+        return f"WordFinder(dict_path='{self.dict_path}')"
 
     def read_file(self):
         """
