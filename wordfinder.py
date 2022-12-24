@@ -86,9 +86,7 @@ class SpecialWordFinder(WordFinder):
     >>> spec_finder.print_num_words()
     7 words read.
 
-    >>> spec_word1 = spec_finder.random()
-
-    >>> spec_word1 in spec_finder.words
+    >>> spec_finder.random() in spec_finder.words
     True
 
     """
@@ -101,12 +99,6 @@ class SpecialWordFinder(WordFinder):
         not be included in the SpecialWordFinder.
         """
 
-        words = []
         with open(self.dict_path, "rt") as file:
-
-            for line in file:
-                line = line.strip()
-                if line and not line.startswith("#"):
-                    words.append(line)
-
-        return words
+            return [line.strip() for line in file
+                    if line.strip() and not line.strip().startswith("#")]
