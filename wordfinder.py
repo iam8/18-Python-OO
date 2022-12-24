@@ -21,11 +21,12 @@ class WordFinder:
     235886 words read.
 
     >>> finder.random() in finder.words
-    >>> finder.random() in finder.words
-    >>> finder.random() in finder.words
+    True
 
-    >>> # Has a very small chance of failing
-    >>> len(set([word1, word2, word3])) == 3
+    >>> finder.random() in finder.words
+    True
+
+    >>> finder.random() in finder.words
     True
 
     >>> finder
